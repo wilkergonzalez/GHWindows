@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GH Windows - Enhance Your View | Premium Window Solutions</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                toggle.classList.remove('active');
+            } else {
+                mobileNav.classList.add('active');
+                toggle.classList.add('active');
+            }
+        }
+        
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            mobileNav.classList.remove('active');
+            toggle.classList.remove('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!toggle.contains(event.target) && !mobileNav.contains(event.target)) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Close mobile menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="logo.jpg"/>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="contact-info">
+                    <a href="tel:+18015125041" class="phone">📞 (801) 512-5041</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+                <li><a href="#products" onclick="closeMobileMenu()">Products</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="#process" onclick="closeMobileMenu()">Process</a></li>
+                <li><a href="#testimonials" onclick="closeMobileMenu()">Reviews</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+                <li><a href="tel:+18015125041" onclick="closeMobileMenu()" style="background: #22c55e; margin: 10px; border-radius: 25px; text-align: center;">📞 (801) 512-5041</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Enhance Your View</h1>
+                <p>Transform your home with premium windows that combine style, efficiency, and lasting quality. Experience the GH Windows difference.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Window Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🪟</div>
+                    <h3>Window Replacement</h3>
+                    <p>Complete window replacement services with premium materials and professional installation. Energy-efficient solutions that reduce costs and improve comfort.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Window Installation</h3>
+                    <p>Expert installation of new windows for new construction and home additions. Precision fitting and weather sealing for optimal performance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Custom Windows</h3>
+                    <p>Bespoke window solutions tailored to your unique architectural needs. From specialty shapes to custom colors and finishes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Energy Efficiency</h3>
+                    <p>Upgrade to energy-efficient windows with advanced glass technology. Reduce heating and cooling costs while improving indoor comfort.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Window Repair</h3>
+                    <p>Professional repair services for damaged or malfunctioning windows. Restore functionality and appearance with expert craftsmanship.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Free Consultation</h3>
+                    <p>Comprehensive assessment of your window needs with detailed estimates. No obligation consultation to help you make informed decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Window Products</h2>
+            <div class="products-showcase">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="doublehung.avif" alt="double hung window">
+                    </div>
+                    <div class="product-info">
+                        <h3>Double-Hung Windows</h3>
+                        <p>Classic design with both sashes operable for versatile ventilation and easy cleaning.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="casement.jpg" alt="casement window image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casement Windows</h3>
+                        <p>Side-hinged windows that open outward for maximum ventilation and unobstructed views.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="slidingwindow.avif" alt="sliding window">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sliding Windows</h3>
+                        <p>Smooth horizontal operation with space-saving design perfect for modern homes.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="baywindow.jpg" alt="bay window">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bay Windows</h3>
+                        <p>Elegant projection windows that create additional interior space and panoramic views.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="picturewindow.webp" alt="picture window">
+                    </div>
+                    <div class="product-info">
+                        <h3>Picture Windows</h3>
+                        <p>Large, fixed windows designed to maximize natural light and showcase beautiful views.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="awningwindow.jpg" alt="awning window">
+                    </div>
+                    <div class="product-info">
+                        <h3>Awning Windows</h3>
+                        <p>Top-hinged windows that open outward from the bottom for ventilation even during rain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose GH Windows?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <h3>Premium Quality</h3>
+                    <p>Superior materials and craftsmanship for windows that last decades with minimal maintenance.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Expert Installation</h3>
+                    <p>Professional installation team with years of experience ensuring perfect fit and performance.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌟</div>
+                    <h3>Energy Efficient</h3>
+                    <p>Advanced low-E glass and insulation technology to reduce energy costs and improve comfort.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Lifetime Warranty</h3>
+                    <p>Comprehensive warranty coverage for peace of mind and long-term protection of your investment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About GH Windows</h2>
+                    <p>With over two decades of experience in the window industry, GH Windows has established itself as a trusted name in residential and commercial window solutions. Our commitment to quality, innovation, and customer satisfaction has made us the preferred choice for homeowners throughout the region.</p>
+                    <p>We combine traditional craftsmanship with modern technology to deliver windows that not only enhance your home's appearance but also improve energy efficiency and comfort. From initial consultation to final installation, we provide personalized service tailored to your specific needs and budget.</p>
+                    <p>Our team of skilled professionals takes pride in every project, ensuring that each window installation meets our rigorous standards for quality and performance. When you choose GH Windows, you're choosing a partner committed to enhancing your view and your home's value.</p>
+                </div>
+                <div class="about-image">
+                    About Us Team Photo
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process">
+        <div class="container">
+            <h2 class="section-title">Our Installation Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Consultation</h3>
+                    <p>Free in-home consultation to assess your needs, take measurements, and discuss options that fit your style and budget.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Design & Quote</h3>
+                    <p>Custom design proposal with detailed specifications and transparent pricing. No hidden fees or surprises.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Manufacturing</h3>
+                    <p>Precision manufacturing of your custom windows using premium materials and advanced production techniques.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Installation</h3>
+                    <p>Professional installation by our certified team with minimal disruption to your daily routine. Clean-up included.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>Final Inspection</h3>
+                    <p>Thorough quality inspection and walkthrough to ensure perfect operation and your complete satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The team at GH Windows exceeded our expectations. The installation was smooth, professional, and the results are amazing. Our energy bills have dropped significantly!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">Photo</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"From consultation to completion, GH Windows provided exceptional service. The custom bay window they installed has completely transformed our living room."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">Photo</div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Quality workmanship and fair pricing. The windows look beautiful and function perfectly. I would definitely recommend GH Windows to anyone."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">Photo</div>
+                        <div class="author-info">
+                            <h4>Emily Rodriguez</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Quote Today</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" style="width: 100%; padding: 0.75rem; border: none; border-radius: 8px; font-size: 1rem;">
+                                <option>Window Replacement</option>
+                                <option>New Window Installation</option>
+                                <option>Custom Windows</option>
+                                <option>Window Repair</option>
+                                <option>Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Get Free Quote</button>
+                    </form>
+                </div>
+                <div class="contact-info-section">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(801)-512-5041</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>ghwindows2019@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon-Fri: 8:00 AM - 6:00 PM </p>
